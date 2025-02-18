@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to BSP Automation</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      h1,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        background: #ffffff;
+        border: 1px solid #cccccc;
+      }
+      .header {
+        text-align: center;
+        background: #333;
+      }
+      .header img {
+        max-width: 100%;
+        height: auto;
+      }
+      .content {
+        padding: 48px;
+      }
+      .content h1 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 133%;
+        color: #333333;
+      }
+      .lead {
+        color: #333333;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 24px;
+        line-height: 133%;
+      }
+      .message {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 125%;
+        letter-spacing: -0.02em;
+        color: #333333;
+        margin-bottom: 24px;
+      }
+
+      /* Item List Section */
+      .item-list {
+        width: 100%;
+        border-spacing: 0;
+        margin-bottom: 24px;
+      }
+      .item-row {
+        border-bottom: 1px solid #ddd;
+        padding: 16px 0;
+      }
+      .item-img {
+        padding: 0;
+      }
+      .item-details {
+        padding-left: 12px;
+      }
+      .item-name {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 114%;
+        color: #333333;
+      }
+      .item-sku {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 114%;
+        color: #333333;
+      }
+      .item-quantity {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 114%;
+        text-align: right;
+        color: #333333;
+      }
+      .cannot_see,
+      .confirm_link {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 167%;
+        letter-spacing: -0.02em;
+        color: #333333;
+      }
+      .confirm_link {
+        font-weight: 700;
+        text-decoration: none;
+        color: #de3023;
+      }
+      .footer {
+        width: 100%;
+        background: #333;
+        color: #ffffff;
+        padding: 32px 48px;
+      }
+      .footer a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .space {
+        width: 100%;
+        display: block;
+        padding: 12px;
+      }
+      .copyright {
+        width: 100%;
+      }
+      .social-icons {
+        width: 100%;
+        text-align: center;
+      }
+      .social-icons a {
+        width: 24px;
+        display: inline-block;
+        margin: 0px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="{{logo_url}}"
+          width="600"
+          height="128"
+          alt="BSP Automation Logo"
+        />
+      </div>
+      <div class="content">
+        <h1>Hello, {{user_name}}!</h1>
+        <p class="lead">You have placed an enquiry</p>
+        <p class="message">
+          Ultrices a ullamcorper enim gravida urna nunc in. Adipiscing dignissim
+          nunc viverra mattis pellentesque. Iaculis integer blandit a nunc
+          facilisi scelerisque.
+        </p>
+        <table class="item-list" cellspacing="0" cellpadding="8" width="100%">
+          {{#each items}}
+          <tr class="item-row">
+            <td class="item-img" width="64">
+              <img
+                width="64"
+                height="64"
+                src="{{this.image_url}}"
+                alt="{{this.name}}"
+              />
+            </td>
+            <td class="item-details">
+              <div class="item-name">{{this.name}}</div>
+              <div class="item-sku">{{this.sku}}</div>
+            </td>
+            <td class="item-quantity" width="10%">x{{this.quantity}}</td>
+          </tr>
+          {{/each}}
+        </table>
+        <p class="cannot_see">
+          Having a problem viewing this email? Click the link below to open it
+          in a browser
+        </p>
+        <p>
+          <a class="confirm_link" href="{{email_view_link}}">
+            {{email_view_link}}
+          </a>
+        </p>
+      </div>
+      <table class="footer" cellspacing="0" cellpadding="0" width="100%">
+        <tr class="copyright">
+          <td align="left" style="width: 50%">bspautomation.com</td>
+          <td align="right" style="width: 50%">info.bsp@gmail.com</td>
+        </tr>
+        <tr class="space"></tr>
+        <tr>
+          <td class="social-icons" align="center" colspan="2">
+            <a href="{{facebook_link}}"
+              ><img
+                width="32"
+                height="32"
+                src="https://website.main.testing.bsp.vecto.it/email-templates/facebook.png"
+                alt="Facebook"
+            /></a>
+            <a href="{{instagram_link}}"
+              ><img
+                width="32"
+                height="32"
+                src="https://website.main.testing.bsp.vecto.it/email-templates/instagram.png"
+                alt="Instagram"
+            /></a>
+            <a href="{{whatsapp_link}}"
+              ><img
+                width="32"
+                height="32"
+                src="https://website.main.testing.bsp.vecto.it/email-templates/whatsapp.png"
+                alt="WhatsApp"
+            /></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
