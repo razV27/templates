@@ -126,45 +126,43 @@
         />
       </div>
       <div class="content">
-        <h1>Hello, {{{user_name}}}!</h1>
+        <h1>Hello, {{user_name}}!</h1>
         <p class="lead">You have requested to reset your password</p>
         <p class="message">
           Please click the button below to reset your password. You will be
           redirected to our website where you will be able to set up a new one.
         </p>
-        <a href="{{{confirm_link}}}" class="button">RESET PASSWORD</a>
+        <a href="{{confirm_link}}" class="button">RESET PASSWORD</a>
         <p class="cannot_see">
           Please ignore this email if you haven’t sent such a request.
         </p>
         <p>
-          <a class="confirm_link" href="{{{confirm_link}}}"
-            >{{{confirm_link}}}</a
-          >
+          <a class="confirm_link" href="{{confirm_link}}">{{confirm_link}}</a>
         </p>
       </div>
       <table class="footer" cellspacing="0" cellpadding="0" width="100%">
         <tr class="copyright">
-          <td align="left" style="width: 50%">{{{website}}}</td>
-          <td align="right" style="width: 50%">{{{email}}}</td>
+          <td align="left" style="width: 50%">{{website}}</td>
+          <td align="right" style="width: 50%">{{email}}</td>
         </tr>
         <tr class="space"></tr>
         <tr>
           <td class="social-icons" align="center" colspan="2">
-            <a href="{{{facebook}}}"
+            <a href="{{facebook}}"
               ><img
                 width="32"
                 height="32"
                 src="https://website.main.testing.bsp.vecto.it/email-templates/facebook.png"
                 alt="Facebook"
             /></a>
-            <a href="{{{instagram}}}"
+            <a href="{{instagram}}"
               ><img
                 width="32"
                 height="32"
                 src="https://website.main.testing.bsp.vecto.it/email-templates/instagram.png"
                 alt="Instagram"
             /></a>
-            <a href="{{{whatsapp}}}"
+            <a href="{{whatsapp}}"
               ><img
                 width="32"
                 height="32"
