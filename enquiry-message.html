@@ -138,7 +138,7 @@
     <div class="container">
       <div class="header">
         <img
-          src="{{logo_url}}"
+          src="https://website.main.testing.bsp.vecto.it/email-templates/logo.png"
           width="600"
           height="128"
           alt="BSP Automation Logo"
@@ -153,23 +153,23 @@
           facilisi scelerisque.
         </p>
         <table class="item-list" cellspacing="0" cellpadding="8" width="100%">
-          {{{#each items}}}
+          {{#each items}}
           <tr class="item-row">
             <td class="item-img" width="64">
               <img
                 width="64"
                 height="64"
-                src="{{{this.image_url}}}"
-                alt="{{{this.name}}}"
+                src="{{this.image_url}}"
+                alt="{{this.name}}"
               />
             </td>
             <td class="item-details">
-              <div class="item-name">{{{this.name}}}</div>
-              <div class="item-sku">{{{this.sku}}}</div>
+              <div class="item-name">{{this.name}}</div>
+              <div class="item-sku">{{this.sku}}</div>
             </td>
-            <td class="item-quantity" width="10%">x{{{this.quantity}}}</td>
+            <td class="item-quantity" width="10%">x{{this.quantity}}</td>
           </tr>
-          {{{/each}}}
+          {{/each}}
         </table>
         <p class="cannot_see">
           Having a problem viewing this email? Click the link below to open it
