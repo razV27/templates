@@ -163,15 +163,15 @@
               <img
                 width="64"
                 height="64"
-                src="{{this.image_url}}"
-                alt="{{this.name}}"
+                src="{{{this.image_url}}}"
+                alt="{{{this.name}}}"
               />
             </td>
             <td class="item-details">
-              <div class="item-name">{{this.name}}</div>
-              <div class="item-sku">{{this.sku}}</div>
+              <div class="item-name">{{{this.name}}}</div>
+              <div class="item-sku">{{{this.sku}}}</div>
             </td>
-            <td class="item-quantity" width="10%">x{{this.quantity}}</td>
+            <td class="item-quantity" width="10%">x{{{this.quantity}}}</td>
           </tr>
           {{/each}}
         </table>
@@ -194,7 +194,11 @@
         <tr>
           <td class="social-icons" align="center" colspan="2">
             <a href="{{{facebook}}}"
-              ><img width="32" height="32" src="https://website.main.testing.bsp.vecto.it/email-templates/facebook.png" alt="Facebook"
+              ><img
+                width="32"
+                height="32"
+                src="https://website.main.testing.bsp.vecto.it/email-templates/facebook.png"
+                alt="Facebook"
             /></a>
             <a href="{{{instagram}}}"
               ><img
@@ -204,7 +208,11 @@
                 alt="Instagram"
             /></a>
             <a href="{{{whatsapp}}}"
-              ><img width="32" height="32" src="https://website.main.testing.bsp.vecto.it/email-templates/whatsapp.png" alt="WhatsApp"
+              ><img
+                width="32"
+                height="32"
+                src="https://website.main.testing.bsp.vecto.it/email-templates/whatsapp.png"
+                alt="WhatsApp"
             /></a>
           </td>
         </tr>
