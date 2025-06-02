@@ -163,8 +163,8 @@
         />
       </div>
       <div class="content">
-        <h1>Hello, {{user_name}}!</h1>
-        <p class="lead">{{client_user_name}} has updated an enquiry list</p>
+        <p class="lead">{{client_user_name}} has updated an enquiry.</p>
+        <p>New status: {{status}}</p>
         <table class="user_details">
           <tbody>
             <thead>
@@ -192,7 +192,6 @@
           </tbody>
         </table>
         <table class="item-list" cellspacing="0" cellpadding="8" width="100%">
-          {{#each items}}
           <tr class="item-row">
             <td class="item-img" width="64">
               <img
@@ -208,7 +207,6 @@
             </td>
             <td class="item-quantity" width="10%">x{{this.quantity}}</td>
           </tr>
-          {{/each}}
         </table>
         <p class="message">
           Ultrices a ullamcorper enim gravida urna nunc in. Adipiscing dignissim
