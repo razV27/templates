@@ -137,6 +137,10 @@
       .copyright {
         width: 100%;
       }
+      .gmail {
+        display: inline-block;
+        margin-left: auto;
+      }
       .social-icons {
         width: 100%;
         text-align: center;
@@ -159,7 +163,7 @@
         />
       </div>
       <div class="content">
-        <p class="lead">{{client_user_name}} has updated an enquiry.</p>
+        <p class="lead">{{admin_name}} has updated an enquiry.</p>
         <p>New status: {{status}}</p>
         <table class="user_details">
           <tbody>
@@ -193,15 +197,15 @@
               <img
                 width="64"
                 height="64"
-                src="{{this.image_url}}"
-                alt="{{this.name}}"
+                src="{{item_image_url}}"
+                alt="{{item_name}}"
               />
             </td>
             <td class="item-details">
-              <div class="item-name">{{this.name}}</div>
-              <div class="item-sku">{{this.sku}}</div>
+              <div class="item-name">{{item_name}}</div>
+              <div class="item-sku">{{item_sku}}</div>
             </td>
-            <td class="item-quantity" width="10%">x{{this.quantity}}</td>
+            <td class="item-quantity" width="10%">x{{item_quantity}}</td>
           </tr>
         </table>
         <p class="message">
@@ -214,9 +218,7 @@
           in a browser
         </p>
         <p>
-          <a class="confirm_link" href="{{email_view_link}}">
-            {{email_view_link}}
-          </a>
+          <a class="confirm_link" href="{{confirm_link}}"> {{confirm_link}} </a>
         </p>
       </div>
       <table class="footer" cellspacing="0" cellpadding="0" width="100%">
@@ -227,21 +229,21 @@
         <tr class="space"></tr>
         <tr>
           <td class="social-icons" align="center" colspan="2">
-            <a href="{{facebook_link}}"
+            <a href="{{facebook}}"
               ><img
                 width="32"
                 height="32"
                 src="https://website.main.testing.bsp.vecto.it/email-templates/facebook.png"
                 alt="Facebook"
             /></a>
-            <a href="{{instagram_link}}"
+            <a href="{{instagram}}"
               ><img
                 width="32"
                 height="32"
                 src="https://website.main.testing.bsp.vecto.it/email-templates/instagram.png"
                 alt="Instagram"
             /></a>
-            <a href="{{whatsapp_link}}"
+            <a href="{{whatsapp}}"
               ><img
                 width="32"
                 height="32"
