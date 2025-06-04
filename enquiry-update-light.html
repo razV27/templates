@@ -163,7 +163,7 @@
         />
       </div>
       <div class="content">
-        <p class="lead">{{client_user_name}} has updated an enquiry.</p>
+        <p class="lead">{{admin_name}} has updated an enquiry.</p>
         <p>New status: {{status}}</p>
         <table class="user_details">
           <tbody>
@@ -197,15 +197,15 @@
               <img
                 width="64"
                 height="64"
-                src="{{this.image_url}}"
-                alt="{{this.name}}"
+                src="{{item_image_url}}"
+                alt="{{item_name}}"
               />
             </td>
             <td class="item-details">
-              <div class="item-name">{{this.name}}</div>
-              <div class="item-sku">{{this.sku}}</div>
+              <div class="item-name">{{item_name}}</div>
+              <div class="item-sku">{{item_sku}}</div>
             </td>
-            <td class="item-quantity" width="10%">x{{this.quantity}}</td>
+            <td class="item-quantity" width="10%">x{{item_quantity}}</td>
           </tr>
         </table>
         <p class="message">
