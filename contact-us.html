@@ -26,7 +26,6 @@
       }
       .header {
         text-align: center;
-        background: #333;
       }
       .header img {
         max-width: 100%;
@@ -191,26 +190,7 @@
           </tbody>
         </table>
         <p class="content_text" style="margin-bottom: 18px">
-          Vestibulum nisi at in urna. Elit lorem semper magna ipsum feugiat
-          commodo pellentesque porttitor et. Sed justo scelerisque erat lobortis
-          neque viverra. Laoreet quis viverra dictum elit viverra consectetur.
-          Varius risus risus magna consequat adipiscing. Quam vitae nibh nibh
-          amet viverra ultricies nullam. Faucibus sed sed at eget massa. Sit non
-          risus vel sed scelerisque
-        </p>
-        <p class="content_text">
-          Lectus diam imperdiet tempor sed dui id eget adipiscing. Et
-          suspendisse mauris sagittis vulputate neque dolor proin diam. Vitae
-          tincidunt a porta at ipsum eleifend. Malesuada faucibus cursus non
-          faucibus dolor tortor tincidunt quis integer. Nulla convallis nibh
-          viverra dictum lorem turpis aenean interdum. Rhoncus pellentesque
-          tellus amet neque tristique sed dignissim laoreet eget. Molestie
-          scelerisque at et sollicitudin nulla mi nec.
-        </p>
-        <p class="message">
-          Ultrices a ullamcorper enim gravida urna nunc in. Adipiscing dignissim
-          nunc viverra mattis pellentesque. Iaculis integer blandit a nunc
-          facilisi scelerisque.
+          {{message}}
         </p>
         <p class="cannot_see">
           Having a problem viewing this email? Click the link below to open it
@@ -224,27 +204,20 @@
       </div>
       <table class="footer" cellspacing="0" cellpadding="0" width="100%">
         <tr class="copyright">
-          <td align="left" style="width: 50%">bspautomation.com</td>
-          <td align="right" style="width: 50%">info.bsp@gmail.com</td>
+          <td align="left" style="width: 30%">
+            <a href="https://bspautomation.com/">bspautomation.com</a>
+          </td>
+          <td align="center" style="width: 30%">
+            <a href="tel:+31647636191">+31 64 7636191</a>
+          </td>
+          <td align="right" style="width: 30%">
+            <a href="mailto:sales@bspautomation.com">sales@bspautomation.com</a>
+          </td>
         </tr>
         <tr class="space"></tr>
         <tr>
-          <td class="social-icons" align="center" colspan="2">
-            <a href="{{facebook_link}}"
-              ><img
-                width="32"
-                height="32"
-                src="https://website.main.testing.bsp.vecto.it/email-templates/facebook.png"
-                alt="Facebook"
-            /></a>
-            <a href="{{instagram_link}}"
-              ><img
-                width="32"
-                height="32"
-                src="https://website.main.testing.bsp.vecto.it/email-templates/instagram.png"
-                alt="Instagram"
-            /></a>
-            <a href="{{whatsapp_link}}"
+          <td class="social-icons" align="center" colspan="3">
+            <a href="https://wa.me/31647636191"
               ><img
                 width="32"
                 height="32"
