@@ -241,10 +241,8 @@
             </tr>
             {{#if message}}
             <tr>
-              <td colspan="2">
-                <span>Message</span>
-                <div style="margin-top: 8px; font-weight: 400">{{message}}</div>
-              </td>
+              <td><span>Message</span></td>
+              <td><strong>{{message}}</strong></td>
             </tr>
             {{/if}}
           </tbody>
@@ -269,31 +267,35 @@
           </tr>
           {{/each}}
         </table>
-
         {{#if attachments}}
         <div class="attachments-section">
           <div class="attachments-label">Attachments:</div>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px">
-            {{#each attachments}}
-            <a
-              href="{{this.attachment_url}}"
-              target="_blank"
-              style="display: block"
-            >
-              <img
-                src="{{this.attachment_url}}"
-                alt="{{this.attachment_file_name}}"
-                style="
-                  width: 100px;
-                  height: 100px;
-                  object-fit: cover;
-                  border: 1px solid #ddd;
-                  border-radius: 4px;
-                "
-              />
-            </a>
-            {{/each}}
-          </div>
+          <table cellspacing="0" cellpadding="4" width="100%">
+            <tr>
+              {{#each attachments}}
+              <td style="padding: 4px" valign="top">
+                <a
+                  href="{{this.attachment_url}}"
+                  target="_blank"
+                  style="display: block"
+                >
+                  <img
+                    src="{{this.attachment_url}}"
+                    alt="{{this.attachment_file_name}}"
+                    style="
+                      width: 100px;
+                      height: 100px;
+                      object-fit: cover;
+                      border: 1px solid #ddd;
+                      border-radius: 4px;
+                      display: block;
+                    "
+                  />
+                </a>
+              </td>
+              {{/each}}
+            </tr>
+          </table>
         </div>
         {{/if}}
       </div>
