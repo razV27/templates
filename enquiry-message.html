@@ -71,6 +71,27 @@
         color: #333333;
         margin-bottom: 24px;
       }
+      .message-section {
+        background: #f9f9f9;
+        border: 1px solid #edd8d6;
+        border-radius: 4px;
+        padding: 16px;
+        margin-bottom: 24px;
+      }
+      .message-label {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 114%;
+        color: #333333;
+        margin-bottom: 8px;
+      }
+      .message-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #333333;
+        white-space: pre-wrap;
+      }
       .item-list {
         width: 100%;
         border-spacing: 0;
@@ -104,6 +125,33 @@
         line-height: 114%;
         text-align: right;
         color: #333333;
+      }
+      .attachments-section {
+        margin-bottom: 24px;
+      }
+      .attachments-label {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 125%;
+        color: #333333;
+        margin-bottom: 12px;
+      }
+      .attachment-item {
+        background: #f9f9f9;
+        border: 1px solid #edd8d6;
+        border-radius: 4px;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+      }
+      .attachment-link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 114%;
+        color: #de3023;
+        text-decoration: none;
+      }
+      .attachment-link:hover {
+        text-decoration: underline;
       }
       .cannot_see,
       .confirm_link {
@@ -173,7 +221,7 @@
             </tr>
             <tr>
               <td><span>Last name</span></td>
-              <td><strong>{{client_user_last_name}}</strong></td>
+              <td><strong>{{client_last_name}}</strong></td>
             </tr>
             <tr>
               <td><span>Email</span></td>
@@ -191,8 +239,15 @@
               <td><span>Company name</span></td>
               <td><strong>{{client_company_name}}</strong></td>
             </tr>
+            {{#if message}}
+            <tr>
+              <td><span>Message</span></td>
+              <td><strong>{{message}}</strong></td>
+            </tr>
+            {{/if}}
           </tbody>
         </table>
+
         <table class="item-list" cellspacing="0" cellpadding="8" width="100%">
           {{#each items}}
           <tr class="item-row">
@@ -212,6 +267,45 @@
           </tr>
           {{/each}}
         </table>
+        {{#if attachments}}
+        <div class="attachments-section">
+          <div class="attachments-label">Attachments:</div>
+          <table cellspacing="0" cellpadding="0">
+            <tr>
+              {{#each attachments}}
+              <td style="padding: 4px; width: 108px" valign="top">
+                <img
+                  src="{{this.attachment_url}}"
+                  alt="{{this.attachment_file_name}}"
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    display: block;
+                  "
+                />
+              </td>
+              <td style="padding: 4px; width: 108px" valign="top">
+                <img
+                  src="{{this.attachment_url}}"
+                  alt="{{this.attachment_file_name}}"
+                  style="
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    display: block;
+                  "
+                />
+              </td>
+              {{/each}}
+            </tr>
+          </table>
+        </div>
+        {{/if}}
       </div>
       <table class="footer" cellspacing="0" cellpadding="0" width="100%">
         <tr class="copyright">
